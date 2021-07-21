@@ -2,23 +2,25 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>string类 | Gridea</title>
 <link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1626846263937">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="string类 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
+    <meta name="description" content="一、课程目标
+string类
+变量声明和实例化
+常用运算符
+输入输出
+下标访问
+字符串数组
+二、目标详解
+1、string类
+c语言使用'\0'结束的字符数组来表示字符串，为了更方便的使用字符串，c++中专门提供了一个string类，包含在..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -81,41 +83,65 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              string类
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-07-21
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                <p>一、课程目标<br>
+string类<br>
+变量声明和实例化<br>
+常用运算符<br>
+输入输出<br>
+下标访问<br>
+字符串数组<br>
+二、目标详解<br>
+1、string类<br>
+c语言使用'\0'结束的字符数组来表示字符串，为了更方便的使用字符串，c++中专门提供了一个string类，包含在命名空间std中，类库为cstring。</p>
+<p>#include <cstring></p>
+<p>string s = &quot;hello world!&quot;;<br>
+2、变量声明和实例化<br>
+string类型的变量声明和基本类型（int、short、char、bool等）一样：</p>
+<p>string s;<br>
+但是string是一个类，其变量初始化需要经过实例化，即调用构造函数来初始化。</p>
+<p>以下几种典型的实例化方法：</p>
+<p>string s(&quot;hello&quot;);  //将c字符串&quot;hello&quot;作为s的值<br>
+string s(str1);     //拷贝str1字符串变量的值作为s的值<br>
+string s(10, 'a');  //生成10个'a'组成的字符串作为s的值<br>
+3、常用运算符<br>
+为了更方便的对字符串变量进行操作，string类重载了一些运算符，使用起来更加一致。</p>
+<p>string s = &quot;hello world!&quot;;  //赋值<br>
+string s2 = s + &quot; 1234&quot;;  //连接成&quot;hello world! 1234&quot;<br>
+if (s2 == s1)  //是否相等<br>
+4、输入输出<br>
+string类型变量的输入，可以使用几种：</p>
+<p>cin&gt;&gt;s：遇见空格、tab、回车就停止。<br>
+getline(cin, s)：读入一行，遇见回车停止。<br>
+getline(cin, s, ch)：读入一行，遇见ch（字符）停止。<br>
+如果想输入带空格的语句，使用getline函数。</p>
+<p>输出字符串变量跟原来一样，如果想输出地址，使用&amp;地址符。</p>
+<p>5、下标访问<br>
+string类也提供了下标运算符[]，可以使用下标来访问字符元素。</p>
+<p>s = &quot;hello&quot;;<br>
+cout &lt;&lt; s[0] &lt;&lt; endl;  //'h'</p>
+<p>s[0] = 'H';<br>
+cout &lt;&lt; s &lt;&lt; endl; //&quot;Hello&quot;<br>
+6、字符串数组<br>
+每个元素都是一个字符串，例如：</p>
+<p>string color[3] = {&quot;red&quot;, &quot;blue&quot;, &quot;yel</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>

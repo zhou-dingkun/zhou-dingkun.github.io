@@ -2,23 +2,28 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>string常用方法 | Gridea</title>
 <link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1626846263937">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="string常用方法 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
+    <meta name="description" content="string常用方法
+一、课程目标
+赋值：assign
+拼接：push_back、append
+查找：find
+插入：insert
+删除：erase
+替换：replace
+子串：substr
+二、目标详解
+1、拼接
+1.1 拼接字符
+s.p..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -81,46 +86,90 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              string常用方法
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-07-21
               </span>
               <span>
-                1 min read
+                3 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                <p>string常用方法<br>
+一、课程目标<br>
+赋值：assign<br>
+拼接：push_back、append<br>
+查找：find<br>
+插入：insert<br>
+删除：erase<br>
+替换：replace<br>
+子串：substr<br>
+二、目标详解<br>
+1、拼接<br>
+1.1 拼接字符<br>
+s.push_back(ch)：时间复杂度为O(1)，最适合循环里调用。<br>
+s = s + ch：时间复杂度介于O(1)和O(n)之间。<br>
+1.2 拼接字符串<br>
+s.append(t)：时间复杂度为O(n)。<br>
+s = s + t: 时间复杂度为O(n)<br>
+2、查找<br>
+s.find(t)：在s中查找t，返回t第一个出现的位置，如果找不到返回string::npos（2^64-1）<br>
+s.find(t, x): 从第x位开始查找<br>
+s.find_first_of(t, x): 从x位置开始找，第一个t里的字符出现的位置。<br>
+s.find_first_not_of(t, x)：从x位置开始找，第一个不在t里的字符出现的位置。<br>
+s.rfind(t): 从后往前找<br>
+s.find_last_of(t, x)：从后往前找，第一个t里的字符<br>
+s.find_last_not_of(t, x)：从后往前找，第一个不在t里的字符<br>
+s = &quot;hello world!&quot;;<br>
+int pos = s.find(&quot;world&quot;); //6<br>
+3、插入<br>
+s.insert(x, t)：在s的第x位上插入字符串t。</p>
+<p>s = &quot;01234&quot;;<br>
+s.insert(3, &quot;abc&quot;); //012abc34<br>
+注意：x一定要是合法的下标！</p>
+<p>4、删除<br>
+s.erase(x): 从第x位开始删除到最后<br>
+s.erase(x, len)：从第x位开始删除len位<br>
+s = &quot;abcdefg&quot;;<br>
+s.erase(2, 3); // cde被删除了，剩下abf<br>
+注意：x一定要是合法的下标！</p>
+<p>5、替换<br>
+s.replace(x, len, t)：用t替换s中从x开始长度len的一段子串。</p>
+<p>s = &quot;abcdefg&quot;;<br>
+s.replace(2, 1, 123); //ab123def：cd被替换成了123<br>
+注意：</p>
+<p>x -&gt; x+len-1 都要是合法的下标<br>
+替换可以换成删除＋插入实现<br>
+6、子串<br>
+s.substr(x, len)：取出从第x位开始，长度为len 的子串。</p>
+<p>s = &quot;abcdefg&quot;;<br>
+string s2 = s.substr(3, 2); //s2 -&gt; de<br>
+注意：</p>
+<p>x一定要是合法的下标。<br>
+如果x + len -1越界，则只取合法内容。</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="http://zdkcloud.top/post/string-lei/">
+              <h3 class="post-title">
+                string类
+              </h3>
+            </a>
+          </div>
         
 
         

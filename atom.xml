@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://zdkcloud.top</id>
     <title>Gridea</title>
-    <updated>2021-07-20T05:23:17.453Z</updated>
+    <updated>2021-07-21T05:44:32.123Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://zdkcloud.top"/>
     <link rel="self" href="http://zdkcloud.top/atom.xml"/>
@@ -11,15 +11,112 @@
     <icon>http://zdkcloud.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[开始……]]></title>
-        <id>http://zdkcloud.top/post/kai-shi/</id>
-        <link href="http://zdkcloud.top/post/kai-shi/">
+        <title type="html"><![CDATA[string常用方法]]></title>
+        <id>http://zdkcloud.top/post/string-chang-yong-fang-fa/</id>
+        <link href="http://zdkcloud.top/post/string-chang-yong-fang-fa/">
         </link>
-        <updated>2021-07-19T07:22:40.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<p>欢迎来到一只鲲的主页，我们先认识下吧😁😁😁🙏<br>
-在我的主页，我将会介绍和推荐一些科技极客类的内容<br>
-下面，开始啦……</p>
+        <updated>2021-07-21T05:43:28.000Z</updated>
+        <content type="html"><![CDATA[<p>string常用方法<br>
+一、课程目标<br>
+赋值：assign<br>
+拼接：push_back、append<br>
+查找：find<br>
+插入：insert<br>
+删除：erase<br>
+替换：replace<br>
+子串：substr<br>
+二、目标详解<br>
+1、拼接<br>
+1.1 拼接字符<br>
+s.push_back(ch)：时间复杂度为O(1)，最适合循环里调用。<br>
+s = s + ch：时间复杂度介于O(1)和O(n)之间。<br>
+1.2 拼接字符串<br>
+s.append(t)：时间复杂度为O(n)。<br>
+s = s + t: 时间复杂度为O(n)<br>
+2、查找<br>
+s.find(t)：在s中查找t，返回t第一个出现的位置，如果找不到返回string::npos（2^64-1）<br>
+s.find(t, x): 从第x位开始查找<br>
+s.find_first_of(t, x): 从x位置开始找，第一个t里的字符出现的位置。<br>
+s.find_first_not_of(t, x)：从x位置开始找，第一个不在t里的字符出现的位置。<br>
+s.rfind(t): 从后往前找<br>
+s.find_last_of(t, x)：从后往前找，第一个t里的字符<br>
+s.find_last_not_of(t, x)：从后往前找，第一个不在t里的字符<br>
+s = &quot;hello world!&quot;;<br>
+int pos = s.find(&quot;world&quot;); //6<br>
+3、插入<br>
+s.insert(x, t)：在s的第x位上插入字符串t。</p>
+<p>s = &quot;01234&quot;;<br>
+s.insert(3, &quot;abc&quot;); //012abc34<br>
+注意：x一定要是合法的下标！</p>
+<p>4、删除<br>
+s.erase(x): 从第x位开始删除到最后<br>
+s.erase(x, len)：从第x位开始删除len位<br>
+s = &quot;abcdefg&quot;;<br>
+s.erase(2, 3); // cde被删除了，剩下abf<br>
+注意：x一定要是合法的下标！</p>
+<p>5、替换<br>
+s.replace(x, len, t)：用t替换s中从x开始长度len的一段子串。</p>
+<p>s = &quot;abcdefg&quot;;<br>
+s.replace(2, 1, 123); //ab123def：cd被替换成了123<br>
+注意：</p>
+<p>x -&gt; x+len-1 都要是合法的下标<br>
+替换可以换成删除＋插入实现<br>
+6、子串<br>
+s.substr(x, len)：取出从第x位开始，长度为len 的子串。</p>
+<p>s = &quot;abcdefg&quot;;<br>
+string s2 = s.substr(3, 2); //s2 -&gt; de<br>
+注意：</p>
+<p>x一定要是合法的下标。<br>
+如果x + len -1越界，则只取合法内容。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[string类]]></title>
+        <id>http://zdkcloud.top/post/string-lei/</id>
+        <link href="http://zdkcloud.top/post/string-lei/">
+        </link>
+        <updated>2021-07-21T05:38:38.000Z</updated>
+        <content type="html"><![CDATA[<p>一、课程目标<br>
+string类<br>
+变量声明和实例化<br>
+常用运算符<br>
+输入输出<br>
+下标访问<br>
+字符串数组<br>
+二、目标详解<br>
+1、string类<br>
+c语言使用'\0'结束的字符数组来表示字符串，为了更方便的使用字符串，c++中专门提供了一个string类，包含在命名空间std中，类库为cstring。</p>
+<p>#include <cstring></p>
+<p>string s = &quot;hello world!&quot;;<br>
+2、变量声明和实例化<br>
+string类型的变量声明和基本类型（int、short、char、bool等）一样：</p>
+<p>string s;<br>
+但是string是一个类，其变量初始化需要经过实例化，即调用构造函数来初始化。</p>
+<p>以下几种典型的实例化方法：</p>
+<p>string s(&quot;hello&quot;);  //将c字符串&quot;hello&quot;作为s的值<br>
+string s(str1);     //拷贝str1字符串变量的值作为s的值<br>
+string s(10, 'a');  //生成10个'a'组成的字符串作为s的值<br>
+3、常用运算符<br>
+为了更方便的对字符串变量进行操作，string类重载了一些运算符，使用起来更加一致。</p>
+<p>string s = &quot;hello world!&quot;;  //赋值<br>
+string s2 = s + &quot; 1234&quot;;  //连接成&quot;hello world! 1234&quot;<br>
+if (s2 == s1)  //是否相等<br>
+4、输入输出<br>
+string类型变量的输入，可以使用几种：</p>
+<p>cin&gt;&gt;s：遇见空格、tab、回车就停止。<br>
+getline(cin, s)：读入一行，遇见回车停止。<br>
+getline(cin, s, ch)：读入一行，遇见ch（字符）停止。<br>
+如果想输入带空格的语句，使用getline函数。</p>
+<p>输出字符串变量跟原来一样，如果想输出地址，使用&amp;地址符。</p>
+<p>5、下标访问<br>
+string类也提供了下标运算符[]，可以使用下标来访问字符元素。</p>
+<p>s = &quot;hello&quot;;<br>
+cout &lt;&lt; s[0] &lt;&lt; endl;  //'h'</p>
+<p>s[0] = 'H';<br>
+cout &lt;&lt; s &lt;&lt; endl; //&quot;Hello&quot;<br>
+6、字符串数组<br>
+每个元素都是一个字符串，例如：</p>
+<p>string color[3] = {&quot;red&quot;, &quot;blue&quot;, &quot;yel</p>
 ]]></content>
     </entry>
 </feed>
