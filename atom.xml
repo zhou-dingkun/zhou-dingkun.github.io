@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://zdkcloud.top</id>
     <title>Gridea</title>
-    <updated>2021-08-16T06:27:15.829Z</updated>
+    <updated>2021-08-16T06:35:52.734Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://zdkcloud.top"/>
     <link rel="self" href="http://zdkcloud.top/atom.xml"/>
@@ -10,6 +10,99 @@
     <logo>http://zdkcloud.top/images/avatar.png</logo>
     <icon>http://zdkcloud.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[算法复杂度]]></title>
+        <id>http://zdkcloud.top/post/suan-fa-fu-za-du/</id>
+        <link href="http://zdkcloud.top/post/suan-fa-fu-za-du/">
+        </link>
+        <updated>2021-08-16T06:30:41.000Z</updated>
+        <content type="html"><![CDATA[<p>算法复杂度<br>
+一、课程目标<br>
+算法的目标<br>
+算法复杂度<br>
+大O函数<br>
+常见大O函数<br>
+二、目标详解<br>
+1、算法的目标<br>
+算法是对问题的解决方案，但一个问题会有很多种算法，通常一个好的算法需要具备以下目标：</p>
+<p>正确性：对合法输入、非法输入、边界输入都能正确处理，输出合理的结果。<br>
+可读性：算法应该描述清晰，方便阅读、理解和交流。<br>
+健壮性：算法应运行一致，对于相同的输入始终输出相同的结果。<br>
+高效性：算法应占用最少的cpu和内存得到满足的结果，这通过时间复杂度和空间复杂度进行判定。<br>
+2、算法复杂度<br>
+算法复杂度用来衡量算法的高效性，简单的说就是：</p>
+<p>算法运行的有多快（时间效率）<br>
+内存占用的有多少（空间效率）<br>
+然而，运行时间和语言、机器、机器的状态、数据量的大小都有关系，不好横向比较，为此通常使用一个时间复杂度（相对度量）的概念来衡量算法有多快。</p>
+<p>我们假设其它状态不变，仅当问题规模（数据大小）增长时，指令执行的次数也在增长，那么指令执行次数相对于问题规模来说，会构成一个函数T(n)。</p>
+<p>例如－对于以下数组求和的算法1+2+3+...+n：</p>
+<p>int sum = 0; //指令数为1<br>
+for(int i=0; i&lt;n; i++)<br>
+sum += n; //指令数为 n<br>
+cout &lt;&lt; n; //指令数为1<br>
+显然，总的指令数为T(n) = n + 2</p>
+<p>3、大O函数<br>
+假设一个算法的T(n) = 4n^3 - 2n + 5</p>
+<p>当n越来越大时，对于T(n)增长的贡献来说，最高阶的n^3会占据主导地位，其它项可被忽略。</p>
+<p>例如：</p>
+<p>n=100时，n^3是n的的1万倍，因此可忽略掉n的贡献。<br>
+当n从100变成1000时，n<sup>3会增长1000倍，此时4n</sup>3前面的4也可倍忽略。<br>
+我们一般用大O函数来表示最主要的贡献部分：O(T(n)) = O(n^3)，也即算法的时间复杂度。</p>
+<p>数学定义：当存在正常数c和某个规模n0，如果对所有的n&gt;=n0，都有f(n) &lt;= c T(n)，则称f(n)为T(n)的大O函数，写成：f(n) = O(T(n))。</p>
+<p>4、常见大O函数<br>
+函数	名称	例子<br>
+O(1)	常数阶	交换算法<br>
+O(logn)	对数阶	二分查找算法<br>
+O(n)	线性阶	求和算法<br>
+O(nlogn)	线性对数阶	快速排序算法<br>
+O(n^2)	平方阶	冒泡排序算法<br>
+O(n^c)	多项式阶（c&gt;1）	多重循环的算法<br>
+O(c^n)	指数阶	汉诺塔问题<br>
+O(n!)	阶乘阶	旅行商问题<br>
+三、扩展理解－复杂度计算与例子<br>
+1、计算方法<br>
+对算法（或代码）的指令次数进行计算组成T(n)，只保留最高阶项，然后去掉最高阶项前面的常数。</p>
+<p>例如以下代码的T(n) = 3, 时间复杂度为O(1)：</p>
+<p>int a=20;<br>
+int b = a*3 + 4;<br>
+cout &lt;&lt; b;<br>
+2、O(n)的例子<br>
+输出数组元素：</p>
+<p>for(int i=0; i&lt;n; i++)<br>
+cout &lt;&lt; a[n] &lt;&lt; &quot; &quot;;<br>
+3、 O(logn)的例子<br>
+给定n，求2的指数p，使得p &lt;= n &lt; 2p</p>
+<p>int p = 1;<br>
+while(p &lt; n) {<br>
+p *= 2;<br>
+}<br>
+cout &lt;&lt; p;<br>
+4、O(n^2)的例子<br>
+打印二维数组：</p>
+<p>for(int i=0; i&lt;n; i++) {<br>
+for(int j=0; j&lt;n; j++)<br>
+cout &lt;&lt; a[i][j] &lt;&lt; &quot; &quot;;<br>
+cout &lt;&lt; endl;<br>
+}<br>
+5、O(nlogn)的例子<br>
+for(int i=0; i&lt;n; i++)<br>
+for(int j=0; j&lt;n; j *= 2)<br>
+...<br>
+6、O(2^n) 的例子<br>
+汉诺塔问题－代码略。</p>
+<p>递归表达式：</p>
+<p>将n-1个盘子从A经过C移动到B<br>
+将第n个盘子从A移动到C<br>
+将n-1个盘子从B经过A移动到C<br>
+显然T(n) = 2T(n-1) + 1 = 2(2T(n-2) + 1) + 1 = ....，最高阶项为2<sup>n，即O(2</sup>n)。</p>
+<p>7、O(n!)的例子<br>
+旅行商问题：从一个城市出发，经过所有城市后返回出发地，求最短的路径。</p>
+<p>如果用朴素算法，第一个城市有n种选择，第二个有n-1种选择，依次类推，复杂度为O(n!)。</p>
+<p>8、空间复杂度<br>
+空间复杂度指算法运行过程种临时所占用的内存大小，例如变量、数组等的开销，规则与时间复杂度一样。</p>
+<p>在noi竞赛里，对于内存限制一般为128M（或256M），一般都足够使用。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[string常用方法]]></title>
         <id>http://zdkcloud.top/post/string-chang-yong-fang-fa/</id>
