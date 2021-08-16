@@ -2,25 +2,25 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>初识排序算法 | Gridea</title>
 <link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629096544365">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="初识排序算法 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-这是一个不知名中学生的私人博客
-👨‍💻 博主是谁
-有兴趣的可以用电脑硬凑 md5 值（全英文的简称）：
-49baf04f69f31ca986c1175bcb36cbb6
-⛹ 兴..." />
-    <meta name="keywords" content="" />
+    <meta name="description" content="初识排序算法
+一、课程目标
+了解排序算法相关概念
+了解十大排序算法的原理、优化、复杂度
+能手写排序算法代码
+二、目标详解
+1.相关概念
+稳定：如果a原本在b前面，而且a=b，排序之后a仍然在b的前面。
+不稳定：如果a原本在b的前面，而且a=..." />
+    <meta name="keywords" content="c++算法,c++基础,note" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -82,51 +82,70 @@ https://github.com/zhou-dingkun
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              初识排序算法
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-08-16
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
+              
+                <a href="http://zdkcloud.top/tag/5QszDX8IY/" class="post-tag">
+                  # c++算法
+                </a>
+              
+                <a href="http://zdkcloud.top/tag/17nmtKN7r/" class="post-tag">
+                  # c++基础
+                </a>
+              
+                <a href="http://zdkcloud.top/tag/_note/" class="post-tag">
+                  # note
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>这是一个不知名中学生的私人博客</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>有兴趣的可以用电脑硬凑 md5 值（全英文的简称）：<br>
-49baf04f69f31ca986c1175bcb36cbb6</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>c++</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>ababab#@!%$#%&amp;@^*%&amp;</p>
+                <p>初识排序算法<br>
+一、课程目标<br>
+了解排序算法相关概念<br>
+了解十大排序算法的原理、优化、复杂度<br>
+能手写排序算法代码<br>
+二、目标详解<br>
+1.相关概念<br>
+稳定：如果a原本在b前面，而且a=b，排序之后a仍然在b的前面。<br>
+不稳定：如果a原本在b的前面，而且a=b，排序之后 a 可能会出现在 b 的后面。<br>
+时间复杂度：对排序数据的总的操作次数。反映当n变化时，操作次数呈现什么规律。<br>
+空间复杂度：是指算法在计算机内执行时所需存储空间的度量，它也是数据规模n的函数。<br>
+就地排序：排序算法在原数组中即可完成，不需要额外的空间占用，即空间复杂度为O(1)。<br>
+2.排序的分类<br>
+2.1 从排序方法来分：</p>
+<p>非线性时间比较类排序：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此称为非线性时间比较类排序。冒泡排序、插入排序、选择排序、希尔排序、归并、快速排序、堆排序都是非线性时间比较类排序。</p>
+<p>线性时间非比较类排序：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此称为线性时间非比较类排序。计数排序、桶排序、基数排序是线性时间非比较类排序。</p>
+<p>2.2 从稳定性来分：</p>
+<p>稳定排序：冒泡排序、插入排序、归并排序、计数排序、基数排序、桶排序</p>
+<p>不稳定排序：快速排序、选择排序、堆排序、希尔排序</p>
+<p>不稳定的排序也可以改变代码变为稳定排序，但是会多执行不必要的操作</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="http://zdkcloud.top/post/suan-fa-fu-za-du/">
+              <h3 class="post-title">
+                算法复杂度
+              </h3>
+            </a>
+          </div>
         
 
         

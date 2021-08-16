@@ -1,0 +1,219 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>初识数据结构 | Gridea</title>
+<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629096544365">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="初识数据结构 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="初识数据结构
+一、课程目标
+数据结构
+常见逻辑结构
+常见物理结构
+STL标准库
+二、目标详解
+
+数据结构
+数据结构指计算机存储、组织数据的方式，是相互之间存在一种或多种特定关系的数据元素的集合。简单来讲数据结构是以某种特殊的方式存储数据的容..." />
+    <meta name="keywords" content="c++数据结构,note" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="http://zdkcloud.top">
+  <img class="avatar" src="http://zdkcloud.top/images/avatar.png?v=1629096544365" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    鲲……
+github求star
+https://github.com/zhou-dingkun
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/zhou-dingkun" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              初识数据结构
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-08-16
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="http://zdkcloud.top/tag/0fSIxatsg/" class="post-tag">
+                  # c++数据结构
+                </a>
+              
+                <a href="http://zdkcloud.top/tag/_note/" class="post-tag">
+                  # note
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>初识数据结构<br>
+一、课程目标<br>
+数据结构<br>
+常见逻辑结构<br>
+常见物理结构<br>
+STL标准库<br>
+二、目标详解</p>
+<ol>
+<li>数据结构<br>
+数据结构指计算机存储、组织数据的方式，是相互之间存在一种或多种特定关系的数据元素的集合。简单来讲数据结构是以某种特殊的方式存储数据的容器。这种“存储方式”决定了一个数据结构对于某些操作是高效的，而对于其他操作则是低效的。我们需要了解各种数据结构的优劣和原理，才能在处理实际问题时选取最合适的数据结构。</li>
+</ol>
+<p>数据结构的主要研究内容包含三点：逻辑结构、物理结构、操作。</p>
+<p>一般说到的数据结构即为逻辑结构。</p>
+<ol start="2">
+<li>常见逻辑结构<br>
+根据数据元素间关系，逻辑结构基本可分为以下四类：</li>
+</ol>
+<p>集合结构：结构的数据元素间的关系是“属于同一个集合”。<br>
+线性结构：结构的数据元素之间存在着一对一的关系。<br>
+树形结构：结构的数据元素之间存在着一对多的关系。<br>
+图形结构：结构的数据元素之间存在着多对多的关系，也称网状结构。<br>
+3. 常见物理结构<br>
+物理结构即数据在计算机中的存储方式，分以下四类：</p>
+<p>顺序存储：最基本的存储结构，用一组地址连续的存储单元依次存储线性数据结构的各个数据元素，如数组。 特点：可随机存取；插入和删除要移动元素。</p>
+<p>链式存储：在计算机中用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的,也可以是不连续的）。它不要求逻辑上相邻的元素在物理位置上也相邻，结点间的逻辑关系是由附加的指针字段表示的。如链表。 特点：每个结点由数据域和指针域构成；逻辑相邻不一定物理相邻；插入删除方便；查找结点要慢于顺序存储；存储密度小。</p>
+<p>索引存储：除建立存储结点信息外，还建立附加的索引表来标识结点的地址。索引表由若干索引项组成，如果每个节点在索引表中都有一个索引项，则该索引表就被称为稠密索引。若一组节点在索引表中只对应于一个索引项，则该索引表就成为稀疏索引。索引项的一般形式一般是关键字、地址。常见于数据库中。 特点：检索速度快；索引表占用额外空间。</p>
+<p>散列存储：又称哈希（hash）存储，将要存储元素的关键值与存储的物理位置建立联系，直接根据关键值算出要存入的地址。如哈希表（散列表）。 特点：访问速度快。</p>
+<ol start="4">
+<li>STL标准库<br>
+STL，英文全称 standard template library，中文可译为标准模板库，其包含有大量的模板类和模板函数，是 C++ 提供的一个基础模板的集合，1998年，STL被定为国际标准，正式成为C++程序库的重要组成部分，因此它可以直接在C++里拿来使用，无需安装。</li>
+</ol>
+<p>例如－使用STL的vector容器：</p>
+<p>#include <vector><br>
+STL被组织为下面的13个头文件：<algorithm>、<deque>、<functional>、<iterator>、<array>、<vector>、<list>、&lt;forward_list&gt;、<map>、&lt;unordered_map&gt;、<memory>、<numeric>、<queue>、<set>、&lt;unordered_set&gt;、<stack>、<utility>。</p>
+<p>可分为容器(containers)、迭代器(iterators)、空间配置器(allocator)、配接器(adapters)、算法(algorithms)、仿函数(functors)六个部分，核心是三个部分：</p>
+<p>容器(containers)：管理某类对象用，如队列queue、栈stack、向量vector、集合set、映射map等<br>
+算法(algorithm)：作用于容器上的算法，如排序(sort)、搜索(upper_bound、...)、交换(swap)等<br>
+迭代器(iterators)：用于遍历容器的元素</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/">
+              <h3 class="post-title">
+                初识排序算法
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

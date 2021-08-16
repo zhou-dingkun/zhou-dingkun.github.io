@@ -2,14 +2,124 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://zdkcloud.top</id>
     <title>Gridea</title>
-    <updated>2021-08-16T06:40:48.298Z</updated>
+    <updated>2021-08-16T06:49:06.216Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://zdkcloud.top"/>
     <link rel="self" href="http://zdkcloud.top/atom.xml"/>
-    <subtitle>鲲……</subtitle>
+    <subtitle>鲲……
+github求star
+https://github.com/zhou-dingkun</subtitle>
     <logo>http://zdkcloud.top/images/avatar.png</logo>
     <icon>http://zdkcloud.top/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[常见编译问题]]></title>
+        <id>http://zdkcloud.top/post/chang-jian-bian-yi-wen-ti/</id>
+        <link href="http://zdkcloud.top/post/chang-jian-bian-yi-wen-ti/">
+        </link>
+        <updated>2021-08-16T06:48:50.000Z</updated>
+        <content type="html"><![CDATA[<p>常见编译问题<br>
+一 、背景故事<br>
+bug是不少同学在学习编程中必定碰到的,但是每位同学对bug的处理可能是不一样的,比如接下来几类看看你们有没有在其中:</p>
+<p>辛辛苦苦花了老长时间才写出来的题目,一运行报错了.怎么办呢.看代码,看了一遍又一遍,运气好看出来了,运气不好就放弃了.<br>
+看到题目时有一定的思路,开始做题,很快啊就做出来了,一运行报错,没关系错误提示看的懂,根据提示一下子就解决了,再运行测试,答案不对,郁闷了疯狂的加输出不断测试代码哪里错了,结果辛辛苦苦找到了,一看时间一小时过去了.<br>
+对题目思路清晰,在写代码的时候就对代码进行区块化,写一区块就测试一区块,到写完的时候报错的概率可以说是微乎及微,答案出错也一定是题目哪里看漏了,欠缺某一步的考虑.<br>
+二 、课程目标<br>
+什么是OJ<br>
+三 、目标详解<br>
+1.什么是OJ<br>
+在线判题系统（英语：Online Judge，缩写OJ）是一种在编程竞赛中用来测试参赛程序的在线系统，也可以用于平时练习。许多OJ网站会自发组织一些竞赛。 OJ系统能够编译并执行代码，使用预设的数据对这些程序进行测试。提交的代码一般会在受限的环境下运行，包括时间限制、内存限制、安全限制等。代码的输出会被OJ系统捕获，与标准答案进行比较后返回结果。 OJ网站会对用户进行排名，以用户的提交答案通过数多少或某个题目执行时间快慢为排名依据。 那么对于一个代码进行OJ判断会产生以下结果:</p>
+<p>1.1 正确（AC: Accept）<br>
+恭喜你,代码不需要任何的改动.</p>
+<p>1.2 答案错误（WA: Wrong Answer)<br>
+来源一般为审题不清晰导致的遗漏判断或者读错题,也有可能是代码描述错误</p>
+<p>1.3 编译错误 （CE: Compile Error Error)<br>
+所指的意思就是运行代码会报错,最典型的就是缺失分号和变量未声明.</p>
+<p>1.4 格式错误 （PE: Presentation Error)<br>
+就是说你答案是对的,但是你输出的时候多了个空格什么的,有一点要注意的是并不是所有OJ都是PE,有些就直接显示WA了</p>
+<p>1.5 时间超限 （TLE，Time Limit Exceeded）<br>
+就是指代码运行时间过长,错误来源有,死循环,代码未进行优化和选错算法.</p>
+<p>1.6 运行时错误 (RE: Runtime Error)<br>
+就是指代码在运行时产生了数组下标为负数或者超过数组上限,还有可能就是分母为0.</p>
+<p>1.7 内存超限（MLE: Memory Limit Exceed）<br>
+基本上是指数组开太大了给你100个空间 结果你用了101个.</p>
+<p>那么以上7种就是容易碰到的情况也是我们在写代码时刻要注意的地方，最关键的问题还是属于编译问题，毕竟任何代码的测试编译过关是前提，下面我们着重介绍。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初识数据结构]]></title>
+        <id>http://zdkcloud.top/post/chu-shi-shu-ju-jie-gou/</id>
+        <link href="http://zdkcloud.top/post/chu-shi-shu-ju-jie-gou/">
+        </link>
+        <updated>2021-08-16T06:46:17.000Z</updated>
+        <content type="html"><![CDATA[<p>初识数据结构<br>
+一、课程目标<br>
+数据结构<br>
+常见逻辑结构<br>
+常见物理结构<br>
+STL标准库<br>
+二、目标详解</p>
+<ol>
+<li>数据结构<br>
+数据结构指计算机存储、组织数据的方式，是相互之间存在一种或多种特定关系的数据元素的集合。简单来讲数据结构是以某种特殊的方式存储数据的容器。这种“存储方式”决定了一个数据结构对于某些操作是高效的，而对于其他操作则是低效的。我们需要了解各种数据结构的优劣和原理，才能在处理实际问题时选取最合适的数据结构。</li>
+</ol>
+<p>数据结构的主要研究内容包含三点：逻辑结构、物理结构、操作。</p>
+<p>一般说到的数据结构即为逻辑结构。</p>
+<ol start="2">
+<li>常见逻辑结构<br>
+根据数据元素间关系，逻辑结构基本可分为以下四类：</li>
+</ol>
+<p>集合结构：结构的数据元素间的关系是“属于同一个集合”。<br>
+线性结构：结构的数据元素之间存在着一对一的关系。<br>
+树形结构：结构的数据元素之间存在着一对多的关系。<br>
+图形结构：结构的数据元素之间存在着多对多的关系，也称网状结构。<br>
+3. 常见物理结构<br>
+物理结构即数据在计算机中的存储方式，分以下四类：</p>
+<p>顺序存储：最基本的存储结构，用一组地址连续的存储单元依次存储线性数据结构的各个数据元素，如数组。 特点：可随机存取；插入和删除要移动元素。</p>
+<p>链式存储：在计算机中用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的,也可以是不连续的）。它不要求逻辑上相邻的元素在物理位置上也相邻，结点间的逻辑关系是由附加的指针字段表示的。如链表。 特点：每个结点由数据域和指针域构成；逻辑相邻不一定物理相邻；插入删除方便；查找结点要慢于顺序存储；存储密度小。</p>
+<p>索引存储：除建立存储结点信息外，还建立附加的索引表来标识结点的地址。索引表由若干索引项组成，如果每个节点在索引表中都有一个索引项，则该索引表就被称为稠密索引。若一组节点在索引表中只对应于一个索引项，则该索引表就成为稀疏索引。索引项的一般形式一般是关键字、地址。常见于数据库中。 特点：检索速度快；索引表占用额外空间。</p>
+<p>散列存储：又称哈希（hash）存储，将要存储元素的关键值与存储的物理位置建立联系，直接根据关键值算出要存入的地址。如哈希表（散列表）。 特点：访问速度快。</p>
+<ol start="4">
+<li>STL标准库<br>
+STL，英文全称 standard template library，中文可译为标准模板库，其包含有大量的模板类和模板函数，是 C++ 提供的一个基础模板的集合，1998年，STL被定为国际标准，正式成为C++程序库的重要组成部分，因此它可以直接在C++里拿来使用，无需安装。</li>
+</ol>
+<p>例如－使用STL的vector容器：</p>
+<p>#include <vector><br>
+STL被组织为下面的13个头文件：<algorithm>、<deque>、<functional>、<iterator>、<array>、<vector>、<list>、&lt;forward_list&gt;、<map>、&lt;unordered_map&gt;、<memory>、<numeric>、<queue>、<set>、&lt;unordered_set&gt;、<stack>、<utility>。</p>
+<p>可分为容器(containers)、迭代器(iterators)、空间配置器(allocator)、配接器(adapters)、算法(algorithms)、仿函数(functors)六个部分，核心是三个部分：</p>
+<p>容器(containers)：管理某类对象用，如队列queue、栈stack、向量vector、集合set、映射map等<br>
+算法(algorithm)：作用于容器上的算法，如排序(sort)、搜索(upper_bound、...)、交换(swap)等<br>
+迭代器(iterators)：用于遍历容器的元素</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初识排序算法]]></title>
+        <id>http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/</id>
+        <link href="http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/">
+        </link>
+        <updated>2021-08-16T06:44:42.000Z</updated>
+        <content type="html"><![CDATA[<p>初识排序算法<br>
+一、课程目标<br>
+了解排序算法相关概念<br>
+了解十大排序算法的原理、优化、复杂度<br>
+能手写排序算法代码<br>
+二、目标详解<br>
+1.相关概念<br>
+稳定：如果a原本在b前面，而且a=b，排序之后a仍然在b的前面。<br>
+不稳定：如果a原本在b的前面，而且a=b，排序之后 a 可能会出现在 b 的后面。<br>
+时间复杂度：对排序数据的总的操作次数。反映当n变化时，操作次数呈现什么规律。<br>
+空间复杂度：是指算法在计算机内执行时所需存储空间的度量，它也是数据规模n的函数。<br>
+就地排序：排序算法在原数组中即可完成，不需要额外的空间占用，即空间复杂度为O(1)。<br>
+2.排序的分类<br>
+2.1 从排序方法来分：</p>
+<p>非线性时间比较类排序：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此称为非线性时间比较类排序。冒泡排序、插入排序、选择排序、希尔排序、归并、快速排序、堆排序都是非线性时间比较类排序。</p>
+<p>线性时间非比较类排序：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此称为线性时间非比较类排序。计数排序、桶排序、基数排序是线性时间非比较类排序。</p>
+<p>2.2 从稳定性来分：</p>
+<p>稳定排序：冒泡排序、插入排序、归并排序、计数排序、基数排序、桶排序</p>
+<p>不稳定排序：快速排序、选择排序、堆排序、希尔排序</p>
+<p>不稳定的排序也可以改变代码变为稳定排序，但是会多执行不必要的操作</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[算法复杂度]]></title>
         <id>http://zdkcloud.top/post/suan-fa-fu-za-du/</id>
