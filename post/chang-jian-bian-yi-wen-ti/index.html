@@ -1,107 +1,110 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>常见编译问题 | Gridea</title>
-<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629354479520">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629866683282">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="常见编译问题 | Gridea - Atom Feed" href="http://zdkcloud.top/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="常见编译问题
-一 、背景故事
-bug是不少同学在学习编程中必定碰到的,但是每位同学对bug的处理可能是不一样的,比如接下来几类看看你们有没有在其中:
-辛辛苦苦花了老长时间才写出来的题目,一运行报错了.怎么办呢.看代码,看了一遍又一遍,运气好..." />
-    <meta name="keywords" content="数学,c++基础,note" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="http://zdkcloud.top">
-  <img class="avatar" src="http://zdkcloud.top/images/avatar.png?v=1629354479520" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/zhou-dingkun" target="_blank">
-          <i class="ri-github-line"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://zdkcloud.top">
+        <img class="avatar" src="http://zdkcloud.top/images/avatar.png?v=1629866683282" alt="" width="32px" height="32px">
+      </a>
+      <a href="http://zdkcloud.top">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              常见编译问题
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-08-16
-              </span>
-              <span>
-                4 min read
-              </span>
-              
-                <a href="http://zdkcloud.top/tag/D8WUoyTV5/" class="post-tag">
-                  # 数学
-                </a>
-              
-                <a href="http://zdkcloud.top/tag/17nmtKN7r/" class="post-tag">
-                  # c++基础
-                </a>
-              
-                <a href="http://zdkcloud.top/tag/_note/" class="post-tag">
-                  # note
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">常见编译问题</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-08-16</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>常见编译问题<br>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="http://zdkcloud.top/tag/D8WUoyTV5/">
+                    数学
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="http://zdkcloud.top/tag/17nmtKN7r/">
+                    c++基础
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="http://zdkcloud.top/tag/_note/">
+                    note
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>常见编译问题<br>
 一 、背景故事<br>
 bug是不少同学在学习编程中必定碰到的,但是每位同学对bug的处理可能是不一样的,比如接下来几类看看你们有没有在其中:</p>
 <p>辛辛苦苦花了老长时间才写出来的题目,一运行报错了.怎么办呢.看代码,看了一遍又一遍,运气好看出来了,运气不好就放弃了.<br>
@@ -128,76 +131,57 @@ bug是不少同学在学习编程中必定碰到的,但是每位同学对bug的�
 基本上是指数组开太大了给你100个空间 结果你用了101个.</p>
 <p>那么以上7种就是容易碰到的情况也是我们在写代码时刻要注意的地方，最关键的问题还是属于编译问题，毕竟任何代码的测试编译过关是前提，下面我们着重介绍。</p>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="http://zdkcloud.top/post/chu-shi-shu-ju-jie-gou/">
+            <a class="purple-link" href="http://zdkcloud.top/post/chu-shi-shu-ju-jie-gou/">
               <h3 class="post-title">
-                初识数据结构
+                下一篇：初识数据结构
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>
