@@ -1,197 +1,133 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
-<title>c++算法 | Gridea</title>
-<meta name="description" content="">
+<title>c++算法 | 兹得克云</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629867179182">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629867489057">
 <link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
 
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
+    <meta name="description" content="兹得克的小站">
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="http://zdkcloud.top">
-        <img class="avatar" src="http://zdkcloud.top/images/avatar.png?v=1629867179182" alt="" width="32px" height="32px">
-      </a>
-      <a href="http://zdkcloud.top">
-        <h1 class="site-title">Gridea</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://zdkcloud.top">
+        <img src="http://zdkcloud.top/images/avatar.png?v=1629867489057" class="site-logo">
+        <h1 class="site-title">兹得克云</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/archives" class="menu purple-link">
+          <a href="/archives" class="site-nav">
             归档
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
     </div>
   </div>
-</transition>
-
-
-      <div class="content-container">
-
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> c++算法
-          </h2> 
-        </div>
-
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
         
-<section class="post-item">
-    <div class="content">
-      <a href="http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/">
-        <h2 class="post-title">初识排序算法</h2>
-      </a>
-      <div class="post-abstract">
+      
         
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2021-08-16</span>
+      
         
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="http://zdkcloud.top/tag/5QszDX8IY/">
-                c++算法
-                
-                  ，
-                
-              </a>
-            
-              <a href="http://zdkcloud.top/tag/17nmtKN7r/">
-                c++基础
-                
-                  ，
-                
-              </a>
-            
-              <a href="http://zdkcloud.top/tag/_note/">
-                note
-                
-              </a>
-            
-          </span>
+      
         
-      </div>
+      
+        
+      
     </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="http://zdkcloud.top/post/suan-fa-fu-za-du/">
-        <h2 class="post-title">算法复杂度</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2021-08-16</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="http://zdkcloud.top/tag/5QszDX8IY/">
-                c++算法
-                
-                  ，
-                
-              </a>
-            
-              <a href="http://zdkcloud.top/tag/17nmtKN7r/">
-                c++基础
-                
-                  ，
-                
-              </a>
-            
-              <a href="http://zdkcloud.top/tag/_note/">
-                note
-                
-              </a>
-            
-          </span>
-        
-      </div>
+    <div class="site-description">
+      兹得克的小站
     </div>
-    
-  </section>
-
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
-
-      <div class="site-footer">
-  <div class="slogan"></div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>©️2021 兹得克云 | <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">RSS</a>
 </div>
 
 
-    </div>
-    <script type="application/javascript">
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: c++算法</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/">
+                  <h2 class="post-title">初识排序算法</h2>
+                </a>
+                <div class="post-date">
+                  2021-08-16
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://zdkcloud.top/post/suan-fa-fu-za-du/">
+                  <h2 class="post-title">算法复杂度</h2>
+                </a>
+                <div class="post-date">
+                  2021-08-16
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
 
-hljs.initHighlightingOnLoad()
+          <div class="pagination-container">
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
 
 var app = new Vue({
   el: '#app',
@@ -201,6 +137,8 @@ var app = new Vue({
 })
 
 </script>
+
+
 
 
 

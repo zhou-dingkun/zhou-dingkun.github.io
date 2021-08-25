@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://zdkcloud.top</id>
-    <title>Gridea</title>
-    <updated>2021-08-25T04:53:01.721Z</updated>
+    <title>兹得克云</title>
+    <updated>2021-08-25T04:58:10.955Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://zdkcloud.top"/>
     <link rel="self" href="http://zdkcloud.top/atom.xml"/>
+    <subtitle>兹得克的小站</subtitle>
     <logo>http://zdkcloud.top/images/avatar.png</logo>
     <icon>http://zdkcloud.top/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, 兹得克云</rights>
     <entry>
         <title type="html"><![CDATA[最简单的c++程序]]></title>
         <id>http://zdkcloud.top/post/zui-jian-dan-de-ccheng-xu/</id>

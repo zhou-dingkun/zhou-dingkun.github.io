@@ -1,103 +1,103 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
-<title>初识数据结构 | Gridea</title>
-<meta name="description" content="">
+<title>初识数据结构 | 兹得克云</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629867179182">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="http://zdkcloud.top/favicon.ico?v=1629867489057">
 <link rel="stylesheet" href="http://zdkcloud.top/styles/main.css">
 
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
+    <meta name="description" content="初识数据结构
+一、课程目标
+数据结构
+常见逻辑结构
+常见物理结构
+STL标准库
+二、目标详解
+
+数据结构
+数据结构指计算机存储、组织数据的方式，是相互之间存在一种或多种特定关系的数据元素的集合。简单来讲数据结构是以某种特殊的方式存储数据的容..." />
+    <meta name="keywords" content="c++数据结构,note" />
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="http://zdkcloud.top">
-        <img class="avatar" src="http://zdkcloud.top/images/avatar.png?v=1629867179182" alt="" width="32px" height="32px">
-      </a>
-      <a href="http://zdkcloud.top">
-        <h1 class="site-title">Gridea</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://zdkcloud.top">
+        <img src="http://zdkcloud.top/images/avatar.png?v=1629867489057" class="site-logo">
+        <h1 class="site-title">兹得克云</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/archives" class="menu purple-link">
+          <a href="/archives" class="site-nav">
             归档
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
     </div>
   </div>
-</transition>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      兹得克的小站
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>©️2021 兹得克云 | <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
 
 
-      <div class="content-container">
-        <div class="post-detail">
-          
-          <h2 class="post-title">初识数据结构</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-08-16</span>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">初识数据结构</h2>
+            <div class="post-date">2021-08-16</div>
             
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="http://zdkcloud.top/tag/0fSIxatsg/">
-                    c++数据结构
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="http://zdkcloud.top/tag/_note/">
-                    note
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>初识数据结构<br>
+            <div class="post-content" v-pre>
+              <p>初识数据结构<br>
 一、课程目标<br>
 数据结构<br>
 常见逻辑结构<br>
@@ -136,45 +136,43 @@ STL被组织为下面的13个头文件：<algorithm>、<deque>、<functional>、
 算法(algorithm)：作用于容器上的算法，如排序(sort)、搜索(upper_bound、...)、交换(swap)等<br>
 迭代器(iterators)：用于遍历容器的元素</p>
 
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://zdkcloud.top/tag/0fSIxatsg/" class="tag">
+                    c++数据结构
+                  </a>
+                
+                  <a href="http://zdkcloud.top/tag/_note/" class="tag">
+                    note
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/">
+                  <h3 class="post-title">
+                    初识排序算法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
+
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="http://zdkcloud.top/post/chu-shi-pai-xu-suan-fa/">
-              <h3 class="post-title">
-                下一篇：初识排序算法
-              </h3>
-            </a>
-          </div>
-          
       </div>
-
-      
-
-      <div class="site-footer">
-  <div class="slogan"></div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://zdkcloud.top/atom.xml" target="_blank">RSS</a>
-</div>
-
-
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
 
 var app = new Vue({
   el: '#app',
@@ -184,6 +182,8 @@ var app = new Vue({
 })
 
 </script>
+
+
 
 
 
