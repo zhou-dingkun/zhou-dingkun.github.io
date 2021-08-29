@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://zdkcloud.top</id>
     <title>兹得克云</title>
-    <updated>2021-08-29T13:06:10.218Z</updated>
+    <updated>2021-08-29T13:10:05.718Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://zdkcloud.top"/>
     <link rel="self" href="http://zdkcloud.top/atom.xml"/>
@@ -10,4 +10,20 @@
     <logo>http://zdkcloud.top/images/avatar.png</logo>
     <icon>http://zdkcloud.top/favicon.ico</icon>
     <rights>All rights reserved 2021, 兹得克云</rights>
+    <entry>
+        <title type="html"><![CDATA[作业]]></title>
+        <id>http://zdkcloud.top/post/zuo-ye/</id>
+        <link href="http://zdkcloud.top/post/zuo-ye/">
+        </link>
+        <updated>2021-08-29T13:07:42.000Z</updated>
+        <content type="html"><![CDATA[<p>科学：链接：https://gitmind.cn/app/doc/53e2384236<br>
+密码:5989<br>
+社政：<br>
+链接：https://gitmind.cn/app/doc/5ba2069115<br>
+密码：9770<br>
+链接：https://gitmind.cn/app/doc/3302070280<br>
+密码：6381<br>
+科学试卷链接：https://zhoudingkun-my.sharepoint.com/:f:/g/personal/zdk_zhoudingkun_onmicrosoft_com/ErEJVLnKpfZDorVap73mCaQBVAy8yY4n41g27Q7rRhcwDw?e=ex1FvZ</p>
+]]></content>
+    </entry>
 </feed>
