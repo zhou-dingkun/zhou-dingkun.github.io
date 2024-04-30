@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http:// peppanebula.xyz</id>
+    <title>萌</title>
+    <updated>2024-04-30T13:48:08.410Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http:// peppanebula.xyz"/>
+    <link rel="self" href="http:// peppanebula.xyz/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>http:// peppanebula.xyz/images/avatar.png</logo>
+    <icon>http:// peppanebula.xyz/favicon.ico</icon>
+    <rights>All rights reserved 2024, 萌</rights>
+    <entry>
+        <title type="html"><![CDATA[萌]]></title>
+        <id>http:// peppanebula.xyz/post/meng/</id>
+        <link href="http:// peppanebula.xyz/post/meng/">
+        </link>
+        <updated>2024-04-30T13:28:33.000Z</updated>
+        <content type="html"><![CDATA[<p>信阳萌萌病逝于全世界为由。罗素盟，它独领风骚，他笑傲江湖，他风流潇洒，他才华横溢，他到一治度谋德仁民物。十乘于天下。他超今冠古，他诀于世间。喜欢萌萌的人在呃也非呃。摒弃萌萌的人再闪也非常。萌萌统治世界，萌萌占领地球，这就是我的善恶观。</p>
+]]></content>
+    </entry>
+</feed>
